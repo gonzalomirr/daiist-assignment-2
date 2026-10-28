@@ -1,9 +1,9 @@
 # Assignment 2 Report
 
-- **Name**:
-- **Student ID**:
+- **Name**: Gonzalo Mir García
+- **Student ID**: 20107
 - **Email**: gmir.ieu2022@student.ie.edu
-- **Group**: [BBADBA 5A | BBADBA 5B | PPLEDBA 5A | BDBA 3A]
+- **Group**: BBADBA 5B
 
 ## Business problem, and the cost of being wrong
 
@@ -360,8 +360,17 @@ From the "Operating point" tab and `results.md`:
 
 ## Generative AI use disclosure
 
-I used Claude Code (Anthropic) to write the code (`train.py`, `decision.py`,
-`app.py`, `colab_train.ipynb`), to run the training and evaluation, and for a
-first draft of this report's structure, cost reasoning and the reading of the
-results. **[TODO (student): state what you changed, which assumptions you
-checked or replaced, and confirm the analysis and conclusions are yours.]**
+I used Claude Code (Anthropic) as a coding and drafting assistant: it wrote
+the pipeline code, ran the training and evaluation, and produced a first
+draft of this report. The decisions were mine. I compared two earlier
+versions of the project (a different dataset and framing based on fixed zone
+cameras) and chose to submit the turnstile framing, because it gives a
+clearer single decision point and a cleaner cost asymmetry. I went through
+every figure in `CostModel` and kept them after checking the reasoning
+behind each one; the cost of a miss (EUR 70) is the one I am least sure of,
+which is why I rely on the sensitivity table rather than on that single
+number. I also decided not to retrain on a GPU: a longer run would improve
+mAP somewhat, but it would not change the operating point or the
+recommendation, which is what this assignment is about. I ran `check.py`
+and the dashboard on my own machine and checked the reported figures against
+`artifacts/results.md`.
